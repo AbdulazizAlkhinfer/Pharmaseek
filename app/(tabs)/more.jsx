@@ -50,7 +50,7 @@ const more = () => {
   <Text className="text-sm text-gray-500">App version 5.03</Text>
   <TouchableOpacity className="flex-row items-center" onPress={() => router.push('/sign-in')}>
     <Ionicons name="log-out-outline" size={20} color="#154C79" />
-    <Text className="text-base text-[#154C79] ml-2">Log out</Text>
+    <Text className="text-base text-black ml-2">Log out</Text>
   </TouchableOpacity>
 </View>
 
