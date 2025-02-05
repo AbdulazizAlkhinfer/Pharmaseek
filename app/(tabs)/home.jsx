@@ -139,32 +139,32 @@ const Home = () => {
 </View>
 
 
-{/* Pharmacy List */}
+
 <FlatList
   data={pharmacies}
   keyExtractor={(item) => item.id}
   renderItem={({ item }) => (
     <View className="p-3 m-3 rounded-lg shadow-sm bg-white">
-      {/* Rating on the top right */}
+      
       <Text className="absolute top-2 right-2 text-gray-700 font-bold">
         ⭐ {item.rating}
       </Text>
 
-      {/* Row: Logo & Details */}
+     
       <View className="flex-row items-center">
-        {/* Pharmacy Logo */}
+        
         <Image 
           source={item.logo ? { uri: item.logo } : images.defaultPharmacyPhoto} 
           className="w-16 h-16 rounded-md"
         />
 
-        {/* Pharmacy Info */}
+        
         <View className="ml-4 flex-1">
           <Text className="text-base font-bold" >{item.name}</Text>
           <Text className="text-gray-600">{item.street}, {item.city}</Text>
           <View className="mt-4" />
 
-          {/* Distance with Pin Icon & Status */}
+         
           <View className="flex-row items-center mt-1">
             <FontAwesome name="map-marker" size={16} color="gray" />
             <Text className="text-gray-500 ml-1">{item.distance} KM   |</Text>
