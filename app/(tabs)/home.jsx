@@ -68,25 +68,25 @@ const Home = () => {
     <SafeAreaView className="flex-1 bg-white">
       {/* Header */}
       <View className="flex-row items-center justify-between p-4 bg-white">
-}
+  {/* Left: Location */}
 <View className="flex-1">
   <TouchableOpacity className="flex-row items-center">
-    
+    {/* Left Arrow Icon */}
     <Ionicons name="chevron-down" size={18} color="gold" />
 
-  
+    {/* Gold Text */}
     <Text className="text-yellow-500 font-bold text-sm ml-1">Usiqhyer, Shaq..</Text>
 
   </TouchableOpacity>
 </View>
 
 
-  
+  {/* Center: Pharmaseek */}
   <View className="absolute left-1/2">
     <Text className="text-xl font-bold -translate-x-1/2">       Pharmaseek</Text>
   </View>
 
-  
+  {/* Right: Notification Icon */}
   <View className="flex-1 items-end ">
   <View className="bg-gray-200 p-2">
   <Ionicons name="notifications-outline" size={24} color="black" />
@@ -98,7 +98,7 @@ const Home = () => {
 
 
 
-     
+      {/* Search Bar */}
       <View className="px-4 mt-2">
         <TextInput
           placeholder="What are you looking for?"
@@ -106,7 +106,7 @@ const Home = () => {
         />
       </View>
 
-      
+      {/* Browse Section */}
       <View className="bg-gray-200 rounded-lg mx-4 mt-4 flex-row items-center" style={{ width: 365, height: 150 }}>
   <View className="flex-1 p-4">
     <Text className="text-gray-900 font-bold text-base mt-1">Browse from Nearest Pharmacies</Text>
@@ -124,7 +124,6 @@ const Home = () => {
     resizeMode="contain"
     style={{ width: 200, height: 400, marginLeft: -100 ,marginRight: -30 }}
   />
-  
 </View>
 
 
@@ -140,32 +139,32 @@ const Home = () => {
 </View>
 
 
-
+{/* Pharmacy List */}
 <FlatList
   data={pharmacies}
   keyExtractor={(item) => item.id}
   renderItem={({ item }) => (
     <View className="p-3 m-3 rounded-lg shadow-sm bg-white">
-     
+      {/* Rating on the top right */}
       <Text className="absolute top-2 right-2 text-gray-700 font-bold">
         ⭐ {item.rating}
       </Text>
 
-   
+      {/* Row: Logo & Details */}
       <View className="flex-row items-center">
-      
+        {/* Pharmacy Logo */}
         <Image 
           source={item.logo ? { uri: item.logo } : images.defaultPharmacyPhoto} 
           className="w-16 h-16 rounded-md"
         />
 
-     
+        {/* Pharmacy Info */}
         <View className="ml-4 flex-1">
           <Text className="text-base font-bold" >{item.name}</Text>
           <Text className="text-gray-600">{item.street}, {item.city}</Text>
           <View className="mt-4" />
 
-         
+          {/* Distance with Pin Icon & Status */}
           <View className="flex-row items-center mt-1">
             <FontAwesome name="map-marker" size={16} color="gray" />
             <Text className="text-gray-500 ml-1">{item.distance} KM   |</Text>
